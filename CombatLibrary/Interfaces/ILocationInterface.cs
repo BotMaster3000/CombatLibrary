@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CombatLibrary.Enums;
 
 namespace CombatLibrary.Interfaces
 {
@@ -11,6 +12,6 @@ namespace CombatLibrary.Interfaces
         string Name { get; set; }
         string Description { get; set; }
 
-        IActionInterface[] PossibleActions { get; set; }
+        LocationActions[] PossibleActions { get; set; }
     }
 }
