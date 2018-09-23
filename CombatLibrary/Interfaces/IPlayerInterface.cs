@@ -11,7 +11,8 @@ namespace CombatLibrary.Interfaces
         List<ICharacterInterface> Companions { get; set; }
         string Name { get; set; }
         string Title { get; set; }
-        
+
+        IMapInterface Map { get; set; }
         ITileInterface CurrentLocation { get; set; }
         List<IActionInterface> PossibleActions { get; set; }
     }

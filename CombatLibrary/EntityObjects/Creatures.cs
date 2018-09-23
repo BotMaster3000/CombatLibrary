@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CombatLibrary.Entities;
+using CombatLibrary.Interfaces;
 
 namespace CombatLibrary.EntityObjects
 {
@@ -13,7 +14,7 @@ namespace CombatLibrary.EntityObjects
         {
             return new Creature("Goblin", 15, 15)
             {
-                Attacks = new Interfaces.IAttackInterface[]
+                Attacks = new IAttackInterface[]
                 {
                     Attacks.Bite(),
                     Attacks.Kick(),
@@ -26,9 +27,22 @@ namespace CombatLibrary.EntityObjects
         {
             return new Creature("Snake", 5, 5)
             {
-                Attacks = new Interfaces.IAttackInterface[]
+                Attacks = new IAttackInterface[]
                 {
                     Attacks.Bite(),
+                }
+            };
+        }
+
+        public static Creature Human()
+        {
+            return new Creature("Human", 80, 80)
+            {
+                Attacks = new IAttackInterface[]
+                {
+                    Attacks.Bite(),
+                    Attacks.Kick(),
+                    Attacks.Punch(),
                 }
             };
         }

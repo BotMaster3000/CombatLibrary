@@ -70,6 +70,7 @@
     <Compile Include="Interfaces\IItemInterface.cs" />
     <Compile Include="Interfaces\ILocationInterface.cs" />
     <Compile Include="Interfaces\IMapInterface.cs" />
+    <Compile Include="Interfaces\IPlayerActionsInterface.cs" />
     <Compile Include="Interfaces\IPlayerInterface.cs" />
     <Compile Include="Interfaces\ITileInterface.cs" />
     <Compile Include="Interfaces\IWeaponInterface.cs" />
