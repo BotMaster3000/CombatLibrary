@@ -57,6 +57,7 @@
     <Compile Include="EntityObjects\Creatures.cs" />
     <Compile Include="EntityObjects\Dices.cs" />
     <Compile Include="EntityObjects\Items.cs" />
+    <Compile Include="EntityObjects\Locations.cs" />
     <Compile Include="EntityObjects\Weapons.cs" />
     <Compile Include="Interfaces\IActionInterface.cs" />
     <Compile Include="Interfaces\IArmorInterface.cs" />
