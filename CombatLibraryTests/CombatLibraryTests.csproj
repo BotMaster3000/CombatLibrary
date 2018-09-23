@@ -62,7 +62,9 @@
     <Compile Include="Entities\CreatureTests.cs" />
     <Compile Include="Entities\DiceTests.cs" />
     <Compile Include="Entities\ItemTests.cs" />
+    <Compile Include="Entities\LocationTests.cs" />
     <Compile Include="Entities\PlayerTests.cs" />
+    <Compile Include="Entities\TileTests.cs" />
     <Compile Include="Entities\WeaponTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

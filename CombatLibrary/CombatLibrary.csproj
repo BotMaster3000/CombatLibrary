@@ -47,7 +47,9 @@
     <Compile Include="Entities\Creature.cs" />
     <Compile Include="Entities\Dice.cs" />
     <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Tile.cs" />
     <Compile Include="Entities\Weapon.cs" />
     <Compile Include="EntityObjects\Armors.cs" />
     <Compile Include="EntityObjects\Attacks.cs" />
