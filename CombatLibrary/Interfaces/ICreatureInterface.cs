@@ -14,5 +14,7 @@ namespace CombatLibrary.Interfaces
         int CurrentHealth { get; set; }
         int Level { get; set; }
         int XP { get; set; }
+
+        IAttackInterface[] Attacks { get; set; }
     }
 }

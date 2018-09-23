@@ -15,5 +15,10 @@ namespace CombatLibrary.EntityObjects
         {
             return new Dice(1, 4, rand);
         }
+
+        public static Dice Dice1D2()
+        {
+            return new Dice(1, 2, rand);
+        }
     }
 }

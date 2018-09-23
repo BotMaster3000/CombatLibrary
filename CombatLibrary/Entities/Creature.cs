@@ -15,6 +15,7 @@ namespace CombatLibrary.Entities
         public int CurrentHealth { get; set; }
         public int Level { get; set; }
         public int XP { get; set; }
+        public IAttackInterface[] Attacks { get; set; }
 
         public Creature(string speciesName, int maxHealth, int currentHealth, int level = 1, int xp = 0)
         {
