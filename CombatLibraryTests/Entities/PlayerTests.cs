@@ -14,7 +14,7 @@ namespace CombatLibrary.Entities.Tests
         [TestMethod]
         public void PlayerConstructorTest()
         {
-            Player player = new Player("Bob", 100, 100, 1, 0);
+            Player player = new Player("Bob", "" , 100, 100, "Human", 1, 0);
         }
     }
 }
