@@ -25,5 +25,14 @@ namespace CombatLibrary.Entities
             Level = level;
             XP = xp;
         }
+
+        public Creature(Creature creature)
+        {
+            SpeciesName = creature.SpeciesName;
+            MaxHealth = creature.MaxHealth;
+            CurrentHealth = creature.CurrentHealth;
+            Level = creature.Level;
+            XP = creature.XP;
+        }
     }
 }

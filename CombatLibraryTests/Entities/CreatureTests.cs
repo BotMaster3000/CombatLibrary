@@ -11,22 +11,35 @@ namespace CombatLibrary.Entities.Tests
     [TestClass]
     public class CreatureTests
     {
+        private const string speciesName = "Kobold";
+        private const int maxHealth = 15;
+        private const int currentHealth = 14;
+        private const int lvl = 2;
+        private const int xp = 13;
+
         [TestMethod]
-        public void CreatureTest()
+        public void CreatureConstructorTest()
         {
-            const string name = "Kobold";
-            const int maxHealth = 15;
-            const int currentHealth = 14;
-            const int lvl = 2;
-            const int xp = 13;
+            Creature creature = new Creature(speciesName, maxHealth, currentHealth, lvl, xp);
 
-            Creature creature = new Creature(name, maxHealth, currentHealth, lvl, xp);
-
-            Assert.AreEqual(name, creature.SpeciesName);
+            Assert.AreEqual(speciesName, creature.SpeciesName);
             Assert.AreEqual(maxHealth, creature.MaxHealth);
             Assert.AreEqual(currentHealth, creature.CurrentHealth);
             Assert.AreEqual(lvl, creature.Level);
             Assert.AreEqual(xp, creature.XP);
+        }
+
+        [TestMethod]
+        public void CreatureConstructorTest2()
+        {
+            Creature oldCreature = new Creature(speciesName, maxHealth, currentHealth, lvl, xp);
+            Creature newCreature = new Creature(oldCreature);
+
+            Assert.AreEqual(speciesName, newCreature.SpeciesName);
+            Assert.AreEqual(maxHealth, newCreature.MaxHealth);
+            Assert.AreEqual(currentHealth, newCreature.CurrentHealth);
+            Assert.AreEqual(lvl, newCreature.Level);
+            Assert.AreEqual(xp, newCreature.XP);
         }
     }
 }

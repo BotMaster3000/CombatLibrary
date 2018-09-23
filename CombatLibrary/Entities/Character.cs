@@ -13,7 +13,12 @@ namespace CombatLibrary.Entities
         public IWeaponInterface Weapon { get; set; }
         public List<IItemInterface> Items { get; set; }
 
-        public Character(string name, int maxHealth, int currentHealth, int level = 1, int xp = 0) : base(name, maxHealth, currentHealth, level, xp)
+        public Character(string speciesName, int maxHealth, int currentHealth, int level = 1, int xp = 0) : base(speciesName, maxHealth, currentHealth, level, xp)
+        {
+
+        }
+
+        public Character(Creature creature) : base(creature)
         {
 
         }

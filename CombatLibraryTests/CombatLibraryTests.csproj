@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Entities\ArmorTests.cs" />
     <Compile Include="Entities\AttackTests.cs" />
+    <Compile Include="Entities\CharacterTests.cs" />
     <Compile Include="Entities\CreatureTests.cs" />
     <Compile Include="Entities\DiceTests.cs" />
     <Compile Include="Entities\ItemTests.cs" />

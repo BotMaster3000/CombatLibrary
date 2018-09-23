@@ -11,12 +11,26 @@ namespace CombatLibrary.EntityObjects
     {
         public static Creature Goblin()
         {
-            return new Creature("Goblin", 15, 15);
+            return new Creature("Goblin", 15, 15)
+            {
+                Attacks = new Interfaces.IAttackInterface[]
+                {
+                    Attacks.Bite(),
+                    Attacks.Kick(),
+                    Attacks.Punch(),
+                },
+            };
         }
 
         public static Creature Snake()
         {
-            return new Creature("Snake", 5, 5);
+            return new Creature("Snake", 5, 5)
+            {
+                Attacks = new Interfaces.IAttackInterface[]
+                {
+                    Attacks.Bite(),
+                }
+            };
         }
     }
 }

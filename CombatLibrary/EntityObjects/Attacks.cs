@@ -13,5 +13,15 @@ namespace CombatLibrary.EntityObjects
         {
             return new Attack("Bite", Dices.Dice1D2(), "Ram your teeth into the enemy");
         }
+
+        public static Attack Punch()
+        {
+            return new Attack("Punch", Dices.Dice1D2(), "Punch the enemy");
+        }
+
+        public static Attack Kick()
+        {
+            return new Attack("Kick", Dices.Dice1D2(), "Kick the enemy");
+        }
     }
 }
