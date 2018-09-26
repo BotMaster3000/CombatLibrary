@@ -31,14 +31,14 @@ namespace CombatLibrary.Entities
 
         public void Move(int xPos, int yPos)
         {
-            while(CurrentLocation.XPos != xPos && CurrentLocation.YPos != yPos)
+            while (CurrentLocation.XPos != xPos && CurrentLocation.YPos != yPos)
             {
                 int nextXPos = CurrentLocation.XPos > xPos ? CurrentLocation.XPos - 1 : CurrentLocation.XPos + 1;
                 int nextYPos = CurrentLocation.YPos > yPos ? CurrentLocation.YPos - 1 : CurrentLocation.YPos + 1;
 
-                foreach(Tile tile in Map.Tiles)
+                foreach (Tile tile in Map.Tiles)
                 {
-                    if(tile.XPos == nextXPos && tile.YPos == nextYPos)
+                    if (tile.XPos == nextXPos && tile.YPos == nextYPos)
                     {
                         CurrentLocation = tile;
                         break;
@@ -49,7 +49,10 @@ namespace CombatLibrary.Entities
 
         public void Recruit()
         {
-            Companions.Add(Characters.Goblin_Swordsman_LeatherArmor());
+            if (CurrentLocation.Location.PossibleActions?.Contains(Enums.LocationActions.Recruit) == true)
+            {
+                Companions.Add(Characters.Goblin_Swordsman_LeatherArmor());
+            }
         }
 
         public void Sleep()

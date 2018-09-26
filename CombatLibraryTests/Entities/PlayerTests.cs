@@ -82,6 +82,19 @@ namespace CombatLibrary.Entities.Tests
         }
 
         [TestMethod]
+        public void RecruitTest_InvalidLocation()
+        {
+            map.Tiles[0].Location = Locations.Grassland();
+            Player player = new Player(name, title, creature)
+            {
+                CurrentLocation = map.Tiles[0]
+            };
+
+            player.Recruit();
+            Assert.IsTrue(player.Companions.Count == 0);
+        }
+
+        [TestMethod]
         public void SleepTest()
         {
             Player player = new Player(name, title, creature);
